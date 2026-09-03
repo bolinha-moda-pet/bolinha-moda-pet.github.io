@@ -6,89 +6,241 @@
   <title>Bolinha Moda Pet | Estilo e Conforto</title>  
 
   <style>
+    /* ==========================================================
+       1. ESTILOS GERAIS DA PÁGINA
+       ========================================================== */
     body {
-        font-family: Arial, sans-serif;
-        background-color: #fff5f7;
-        color: #4a4a4a;
-        margin: 0;
-        padding: 0;
+        font-family: Arial, sans-serif; /* Define a fonte das letras */
+        background-color: #fff5f7;       /* Fundo rosa bem suave da tela */
+        color: #4a4a4a;                  /* Cor do texto geral (cinza escuro) */
+        margin: 0;                       /* Remove as margens padrão do navegador */
+        padding: 0;                      /* Remove o espaçamento interno padrão */
     }
 
-    /* Cabeçalho com a foto da cachorrinha no fundo */
+    /* ==========================================================
+       2. CABEÇALHO COM IMAGEM DE FUNDO TRANSLÚCIDA
+       ========================================================== */
     header {
+        /* Gradiente rosa transparente por cima da foto de fundo 'Untitled.jpeg' */
         background: linear-gradient(rgba(255, 105, 180, 0.65), rgba(255, 105, 180, 0.65)), 
-                    url('Untitled.jpg');
-        background-size: cover;
-        background-position: center;
-        color: white;
-        text-align: center;
-        padding: 50px 10px;
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto para destacar */
+                    url('Untitled.jpeg');
+        background-size: cover;          /* Ajusta a foto para cobrir todo o espaço */
+        background-position: center;     /* Centraliza a foto dentro do cabeçalho */
+        color: white;                    /* Cor do texto em branco */
+        text-align: center;              /* Centraliza os títulos no meio */
+        padding: 50px 10px;              /* Espaço interno para dar altura ao cabeçalho */
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto para destacar da foto */
     }
 
+    /* ==========================================================
+       3. FAIXA DE ALERTA DE PREÇOS
+       ========================================================= */
     .alerta-preco {
-        background-color: #ff1493;
-        color: white;
-        text-align: center;
-        padding: 10px;
-        font-weight: bold;
+        background-color: #ff1493;  /* Rosa choque vibrante */
+        color: white;               /* Letras em branco */
+        text-align: center;         /* Texto no meio da faixa */
+        padding: 10px;              /* Espaçamento acima e abaixo do texto */
+        font-weight: bold;          /* Texto em negrito */
     }
 
-    /* Bloco de tecidos na parte clara */
+    /* ==========================================================
+       4. CAIXA MODERNA DE CATEGORIAS (ARREDONDADA)
+       ========================================================== */
     .menu-tecidos {
-        background-color: #ffffff;
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 20px;
-        border-radius: 12px;
-        border: 2px solid #ffb6c1;
-        text-align: center;
+        background-color: #ffffff;  /* Fundo branco da caixa principal */
+        max-width: 800px;           /* Largura máxima da caixa na tela */
+        margin: 20px auto;          /* Centraliza a caixa na página */
+        padding: 20px;              /* Espaçamento interno da caixa */
+        border-radius: 12px;        /* Bordas arredondadas (o círculo moderno) */
+        border: 2px solid #ffb6c1;  /* Moldura de linha fina rosa suave */
+        text-align: center;         /* Centraliza o título no topo */
     }
 
     .menu-tecidos h3 {
-        color: #d81b60;
+        color: #d81b60;             /* Cor rosa escuro do título "TECIDOS" */
         margin-top: 0;
-        margin-bottom: 12px;
+        margin-bottom: 15px;
         font-size: 1.2em;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+        text-transform: uppercase;  /* Transforma o texto em LETRAS MAIÚSCULAS */
+        letter-spacing: 1px;        /* Dá um leve espaço entre as letras */
     }
 
-    .menu-tecidos a {
-        color: #5c0632;
-        text-decoration: none;
-        margin: 0 10px;
-        font-weight: bold;
-        display: inline-block;
-        padding: 6px 12px;
+    /* Estilo das opções/botões do menu */
+    .menu-tecidos button {
+        background: none;           /* Remove o fundo padrão do botão */
+        border: none;               /* Remove a borda padrão do botão */
+        color: #5c0632;             /* Cor do texto do botão */
+        font-weight: bold;          /* Texto em negrito */
+        font-size: 1em;             /* Tamanho normal da fonte */
+        margin: 5px 8px;            /* Espaçamento entre as opções */
+        padding: 8px 14px;          /* Preenchimento interno do botão */
+        cursor: pointer;            /* Muda o ponteiro do mouse para 'mãozinha' ao passar em cima */
+        transition: all 0.3s ease;  /* Deixa a animação de passar o mouse suave */
     }
 
-    .menu-tecidos a:hover {
-        background-color: #ffe6f0;
-        border-radius: 6px;
+    /* Efeito de destaque quando o mouse passa por cima do botão */
+    .menu-tecidos button:hover {
+        background-color: #ffe6f0;  /* Acende um balão rosa suave atrás do texto */
+        border-radius: 6px;         /* Arredonda os cantos do destaque */
+    }
+
+    /* ==========================================================
+       5. ÁREA QUE SE EXPANDE AO CLICAR (GAVETA SUAVE)
+       ========================================================== */
+    .conteudo-categoria {
+        display: none;              /* MANTÉM ESCONDIDO INICIALMENTE */
+        margin-top: 15px;           /* Espaço acima da área expandida */
+        padding: 20px;              /* Espaço interno */
+        background-color: #fff9fb;  /* Fundo rosa bem claro e suave */
+        border-radius: 8px;         /* Bordas suavemente arredondadas */
+        border-top: 2px dashed #ffb6c1; /* Linha pontilhada rosa separando do menu */
+        text-align: center;
+    }
+
+    /* Quando a categoria for ativada pelo clique, o CSS mostra ela */
+    .conteudo-categoria.ativo {
+        display: block;             /* FAZ A ÁREA APARECER NA TELA */
+    }
+
+    /* Estilo dos cards dos produtos dentro da gaveta */
+    .card-produto {
+        display: inline-block;      /* Organiza os produtos lado a lado */
+        background: #ffffff;        /* Fundo branco do card do produto */
+        border: 1px solid #ffe0e9;   /* Moldura fina rosa claro */
+        border-radius: 8px;         /* Cantos arredondados do card */
+        padding: 10px;              /* Espaço interno */
+        margin: 10px;               /* Distância entre os cards */
+        width: 180px;               /* Largura de cada card */
+    }
+
+    .card-produto img {
+        width: 100%;                /* A foto ocupa toda a largura do card */
+        height: 150px;              /* Altura fixa das fotos */
+        object-fit: cover;          /* Corta a imagem com precisão sem esticar */
+        border-radius: 6px;         /* Bordas suavemente arredondadas na foto */
+    }
+
+    .card-produto h4 {
+        margin: 8px 0 4px 0;
+        color: #ff1493;             /* Nome do produto em rosa */
+    }
+
+    .card-produto p {
+        margin: 0;
+        font-size: 0.9em;
+        color: #666;                /* Detalhes do produto em tom cinza */
     }
   </style>
 </head>
 <body>
 
+  <!-- CABEÇALHO DO SITE -->
   <header>
     <h1>Bolinha Moda Pet</h1>
     <p>Roupas e acessórios para o seu amigo!</p>
   </header>
 
+  <!-- BANNER DE ALERTA DE PREÇO -->
   <div class="alerta-preco">
     💖 Peças exclusivas de R$ 10,00 a R$ 35,00! 💖
   </div>
 
+  <!-- CAIXA MODERNA DE TECIDOS COM EXPANSÃO AO CLICAR -->
   <div class="menu-tecidos">
     <h3>Tecidos</h3>
-    <a href="#">Soft</a>
-    <a href="#">Fleece</a>
-    <a href="#">Moletom</a>
-    <a href="#">Malha Suede</a>
-    <a href="#">Roupas de Super Herói</a>
-    <a href="#">Pijama</a>
+
+    <!-- BOTÕES DAS CATEGORIAS (O comando 'onclick' ativa a gaveta correspondente) -->
+    <button onclick="mostrarCategoria('soft')">Soft</button>
+    <button onclick="mostrarCategoria('fleece')">Fleece</button>
+    <button onclick="mostrarCategoria('moletom')">Moletom</button>
+    <button onclick="mostrarCategoria('suede')">Malha Suede</button>
+    <button onclick="mostrarCategoria('superheroi')">Roupas de Super Herói</button>
+    <button onclick="mostrarCategoria('pijama')">Pijama</button>
+
+    <!-- GAVETA 1: SOFT -->
+    <div id="soft" class="conteudo-categoria">
+      <h4>Peças em Tecido Soft</h4>
+      <div class="card-produto">
+        <!-- Troque 'foto-soft-1.jpeg' pelo nome da foto no GitHub -->
+        <img src="foto-soft-1.jpeg" alt="Roupa Soft">
+        <h4>Casaco Soft</h4>
+        <p>Quentinho e fofinho</p>
+      </div>
+    </div>
+
+    <!-- GAVETA 2: FLEECE -->
+    <div id="fleece" class="conteudo-categoria">
+      <h4>Peças em Tecido Fleece</h4>
+      <div class="card-produto">
+        <img src="foto-fleece-1.jpeg" alt="Roupa Fleece">
+        <h4>Manta Fleece</h4>
+        <p>Toque aveludado</p>
+      </div>
+    </div>
+
+    <!-- GAVETA 3: MOLETOM -->
+    <div id="moletom" class="conteudo-categoria">
+      <h4>Peças em Moletom</h4>
+      <div class="card-produto">
+        <img src="foto-moletom-1.jpeg" alt="Moletom Pet">
+        <h4>Blusa Moletom</h4>
+        <p>Estilo urbano pet</p>
+      </div>
+    </div>
+
+    <!-- GAVETA 4: MALHA SUEDE -->
+    <div id="suede" class="conteudo-categoria">
+      <h4>Peças em Malha Suede</h4>
+      <div class="card-produto">
+        <img src="foto-suede-1.jpeg" alt="Suede Pet">
+        <h4>Vestido Suede</h4>
+        <p>Extremamente macio</p>
+      </div>
+    </div>
+
+    <!-- GAVETA 5: SUPER HERÓI -->
+    <div id="superheroi" class="conteudo-categoria">
+      <h4>Linha Super-Heróis</h4>
+      <div class="card-produto">
+        <img src="foto-heroi-1.jpeg" alt="Fantasia Herói">
+        <h4>Capinha de Herói</h4>
+        <p>Para salvar o dia!</p>
+      </div>
+    </div>
+
+    <!-- GAVETA 6: PIJAMA -->
+    <div id="pijama" class="conteudo-categoria">
+      <h4>Linha de Pijamas</h4>
+      <div class="card-produto">
+        <!-- Quando clicar em Pijama, esta foto vai aparecer aqui -->
+        <img src="pijama.jpeg" alt="Pijama Pet">
+        <h4>Pijama Divertido</h4>
+        <p>Conforto para a noite</p>
+      </div>
+    </div>
+
   </div>
+
+  <!-- ==========================================================
+     6. SCRIPT EM JAVASCRIPT PARA FAZER A EXPANSÃO FUNCIONAR
+     ========================================================== -->
+  <script>
+    function mostrarCategoria(idCategoria) {
+      // 1. Procura todas as gavetas de categorias
+      var categorias = document.querySelectorAll('.conteudo-categoria');
+      
+      // 2. Esconde todas as gavetas para não ficarem abertas juntas
+      categorias.forEach(function(gaveta) {
+        gaveta.classList.remove('ativo');
+      });
+
+      // 3. Procura apenas a gaveta clicada pelo nome (ID) e faz ela aparecer
+      var gavetaClicada = document.getElementById(idCategoria);
+      if (gavetaClicada) {
+        gavetaClicada.classList.add('ativo');
+      }
+    }
+  </script>
 
 </body>
 </html>
