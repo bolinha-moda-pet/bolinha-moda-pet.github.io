@@ -7,11 +7,11 @@
 
   <style>
     /* ==========================================================
-       1. PALETA DE CORES E ESTILOS GERAIS (MODERNO E ELEGANTE)
+       1. PALETA DE CORES E ESTILOS GERAIS
        ========================================================== */
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #faf5f7; /* Fundo rosa claro neutro e sofisticado */
+        background-color: #faf5f7;
         color: #333333;
         margin: 0;
         padding: 0;
@@ -19,10 +19,9 @@
     }
 
     /* ==========================================================
-       2. CABEÇALHO COM FUNDO TRANSLÚCIDO E FILTRO SOFISTICADO
+       2. CABEÇALHO
        ========================================================== */
     header {
-        /* Gradiente tom rosa seco sobreposto à foto Untitled.jpeg */
         background: linear-gradient(rgba(186, 85, 126, 0.65), rgba(186, 85, 126, 0.65)), 
                     url('Untitled.jpeg');
         background-size: cover;
@@ -48,10 +47,10 @@
     }
 
     /* ==========================================================
-       3. FAIXA DE ALERTA DE PREÇOS (ELEGANTE E CLEAN)
+       3. FAIXA DE ALERTA DE PREÇOS
        ========================================================== */
     .alerta-preco {
-        background-color: #c2597f; /* Rosa seco sofisticado */
+        background-color: #c2597f;
         color: #ffffff;
         text-align: center;
         padding: 12px 15px;
@@ -62,136 +61,11 @@
     }
 
     /* ==========================================================
-       4. CAIXA PRINCIPAL DE CATEGORIAS (DESIGN PREMIUM)
-       ========================================================== */
-    .menu-tecidos {
-        background-color: #ffffff;
-        max-width: 900px;
-        margin: 30px auto;
-        padding: 30px 20px;
-        border-radius: 16px;
-        border: 1px solid #f0d5df;
-        box-shadow: 0 8px 20px rgba(194, 89, 127, 0.08);
-        text-align: center;
-    }
-
-    /* Título "Tecidos" com as patinhas grandes nas laterais */
-    .titulo-patinhas {
-        color: #9e3b61;
-        margin-top: 0;
-        margin-bottom: 20px;
-        font-size: 1.5em;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .icone-patinha {
-        font-size: 1.4em; /* Patinha grande */
-    }
-
-    /* Botões das Categorias */
-    .botoes-categorias {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .menu-tecidos button {
-        background-color: #fdf8fa;
-        border: 1px solid #e0b8c6;
-        color: #7a2848;
-        font-weight: 600;
-        font-size: 0.95em;
-        padding: 10px 18px;
-        border-radius: 25px; /* Formato pílula elegante */
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .menu-tecidos button:hover {
-        background-color: #c2597f;
-        color: #ffffff;
-        border-color: #c2597f;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 10px rgba(194, 89, 127, 0.25);
-    }
-
-    /* ==========================================================
-       5. ÁREA EXPANSÍVEL DOS PRODUTOS
-       ========================================================== */
-    .conteudo-categoria {
-        display: none;
-        margin-top: 25px;
-        padding-top: 25px;
-        border-top: 1px solid #f2dbe3;
-        text-align: center;
-    }
-
-    .conteudo-categoria.ativo {
-        display: block;
-        animation: fadeIn 0.4s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(8px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    .conteudo-categoria h3 {
-        color: #9e3b61;
-        font-size: 1.2em;
-        margin-bottom: 20px;
-    }
-
-    /* Grade de Cards */
-    .grid-produtos {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .card-produto {
-        background: #ffffff;
-        border: 1px solid #f0d5df;
-        border-radius: 12px;
-        padding: 12px;
-        width: 220px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        text-align: center;
-    }
-
-    .card-produto:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 18px rgba(194, 89, 127, 0.15);
-    }
-
-    .card-produto img {
-        width: 100%;
-        height: 190px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-
-    .card-produto h4 {
-        margin: 12px 0 0 0;
-        color: #7a2848;
-        font-size: 0.95em;
-        font-weight: 600;
-    }
-
-    /* ==========================================================
-       6. BOTÃO E SEÇÃO DE CONTATO / ATENDIMENTO
+       4. BOTÃO REDIRECIONADOR DE CONTATO
        ========================================================== */
     .area-chamada-contato {
         text-align: center;
-        margin: 40px 20px 20px 20px;
+        margin: 30px 20px 10px 20px;
     }
 
     .btn-contato-redirecionar {
@@ -211,22 +85,134 @@
     .btn-contato-redirecionar:hover {
         background-color: #7a2848;
         transform: translateY(-2px);
-        box-shadow: 0 6px 16px rgba(122, 40, 72, 0.35);
     }
 
-    /* Seção de Canais de Atendimento */
-    .secao-contato {
+    /* ==========================================================
+       5. CAIXA PRINCIPAL DE CATEGORIAS
+       ========================================================== */
+    .menu-tecidos {
         background-color: #ffffff;
         max-width: 900px;
-        margin: 40px auto;
-        padding: 35px 20px;
+        margin: 30px auto;
+        padding: 30px 20px;
         border-radius: 16px;
         border: 1px solid #f0d5df;
         box-shadow: 0 8px 20px rgba(194, 89, 127, 0.08);
         text-align: center;
     }
 
-    .secao-contato h3 {
+    .titulo-patinhas {
+        color: #9e3b61;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .icone-patinha {
+        font-size: 1.4em;
+    }
+
+    .botoes-categorias {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .menu-tecidos button {
+        background-color: #fdf8fa;
+        border: 1px solid #e0b8c6;
+        color: #7a2848;
+        font-weight: 600;
+        font-size: 0.95em;
+        padding: 10px 18px;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .menu-tecidos button:hover {
+        background-color: #c2597f;
+        color: #ffffff;
+        border-color: #c2597f;
+        transform: translateY(-2px);
+    }
+
+    .conteudo-categoria {
+        display: none;
+        margin-top: 25px;
+        padding-top: 25px;
+        border-top: 1px solid #f2dbe3;
+        text-align: center;
+    }
+
+    .conteudo-categoria.ativo {
+        display: block;
+        animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .grid-produtos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card-produto {
+        background: #ffffff;
+        border: 1px solid #f0d5df;
+        border-radius: 12px;
+        padding: 12px;
+        width: 220px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        transition: transform 0.3s ease;
+        text-align: center;
+    }
+
+    .card-produto:hover {
+        transform: translateY(-5px);
+    }
+
+    .card-produto img {
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .card-produto h4 {
+        margin: 12px 0 0 0;
+        color: #7a2848;
+        font-size: 0.95em;
+        font-weight: 600;
+    }
+
+    /* ==========================================================
+       6. SEÇÃO "COMO COMPRAR"
+       ========================================================== */
+    .secao-bloco {
+        background-color: #ffffff;
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 30px 20px;
+        border-radius: 16px;
+        border: 1px solid #f0d5df;
+        box-shadow: 0 8px 20px rgba(194, 89, 127, 0.08);
+        text-align: center;
+    }
+
+    .secao-bloco h3 {
         color: #9e3b61;
         font-size: 1.3em;
         margin-top: 0;
@@ -235,12 +221,123 @@
         letter-spacing: 1px;
     }
 
+    .grid-passos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card-passo {
+        background-color: #fdf8fa;
+        border: 1px dashed #e0b8c6;
+        border-radius: 12px;
+        padding: 20px;
+        width: 240px;
+    }
+
+    .card-passo .numero-passo {
+        background-color: #c2597f;
+        color: white;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin: 0 auto 10px auto;
+    }
+
+    /* ==========================================================
+       7. SEÇÃO "GUIA DE MEDIDAS"
+       ========================================================== */
+    .tabela-medidas {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid #f0d5df;
+    }
+
+    .tabela-medidas th {
+        background-color: #c2597f;
+        color: white;
+        padding: 12px;
+        font-size: 0.95em;
+    }
+
+    .tabela-medidas td {
+        padding: 10px;
+        border-bottom: 1px solid #f8e8ee;
+        color: #555;
+        font-size: 0.9em;
+    }
+
+    .dicas-medicao {
+        background-color: #fdf8fa;
+        border-left: 4px solid #c2597f;
+        padding: 15px;
+        margin: 20px auto 0 auto;
+        max-width: 700px;
+        text-align: left;
+        font-size: 0.9em;
+        color: #666;
+    }
+
+    /* ==========================================================
+       8. MURAL DE DEPOIMENTOS (FOTOS E VÍDEOS DE CLIENTES)
+       ========================================================== */
+    .grid-depoimentos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card-depoimento {
+        background: #ffffff;
+        border: 1px solid #f0d5df;
+        border-radius: 12px;
+        padding: 15px;
+        width: 250px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    }
+
+    .card-depoimento media, .card-depoimento img, .card-depoimento video {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .card-depoimento p {
+        margin: 10px 0 0 0;
+        font-size: 0.88em;
+        color: #555;
+        font-style: italic;
+    }
+
+    .card-depoimento span {
+        display: block;
+        margin-top: 5px;
+        font-weight: bold;
+        color: #9e3b61;
+        font-size: 0.85em;
+        font-style: normal;
+    }
+
+    /* ==========================================================
+       9. SEÇÃO DE CONTATO E ATENDIMENTO
+       ========================================================== */
     .grid-contatos {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
-        margin-top: 20px;
     }
 
     .card-contato {
@@ -258,26 +355,15 @@
         display: block;
     }
 
-    .card-contato h4 {
-        margin: 5px 0;
-        color: #7a2848;
-    }
-
-    .card-contato p {
-        margin: 5px 0 15px 0;
-        color: #666;
-        font-size: 0.9em;
-    }
-
     .btn-whatsapp {
         display: inline-block;
         background-color: #25d366;
         color: white;
         text-decoration: none;
-        padding: 8px 16px;
+        padding: 10px 20px;
         border-radius: 20px;
         font-weight: bold;
-        font-size: 0.85em;
+        font-size: 0.9em;
         transition: background 0.3s;
     }
 
@@ -285,7 +371,29 @@
         background-color: #1eb956;
     }
 
-    /* Rodapé */
+    /* BOTÃO FLUTUANTE DO WHATSAPP NO CANTO DA TELA */
+    .whatsapp-flutuante {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        color: white;
+        border-radius: 50px;
+        padding: 12px 20px;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        z-index: 1000;
+        transition: transform 0.3s;
+    }
+
+    .whatsapp-flutuante:hover {
+        transform: scale(1.05);
+    }
+
     footer {
         text-align: center;
         padding: 20px;
@@ -299,7 +407,7 @@
 </head>
 <body>
 
-  <!-- CABEÇALHO PRINCIPAL -->
+  <!-- CABEÇALHO -->
   <header>
     <h1>Bolinha Moda Pet</h1>
     <p>Conforto e elegância para o seu melhor amigo</p>
@@ -310,21 +418,17 @@
     Todas as peças com valores de R$ 10,00 a R$ 35,00!
   </div>
 
-  <!-- BOTAO DE ATALHO PARA CONTATO -->
+  <!-- BOTÃO REDIRECIONADOR PARA CONTATO -->
   <div class="area-chamada-contato">
     <a href="#contato" class="btn-contato-redirecionar">Entre em contato conosco por aqui</a>
   </div>
 
-  <!-- CAIXA DE CATEGORIAS -->
+  <!-- CAIXA DE CATEGORIAS DOS TECIDOS -->
   <div class="menu-tecidos">
-    
     <h3 class="titulo-patinhas">
-      <span class="icone-patinha">🐾</span> 
-      Tecidos 
-      <span class="icone-patinha">🐾</span>
+      <span class="icone-patinha">🐾</span> Tecidos <span class="icone-patinha">🐾</span>
     </h3>
 
-    <!-- BOTÕES DE CATEGORIAS -->
     <div class="botoes-categorias">
       <button onclick="mostrarCategoria('soft')">Soft</button>
       <button onclick="mostrarCategoria('fleece')">Fleece</button>
@@ -334,140 +438,171 @@
       <button onclick="mostrarCategoria('pijama')">Pijama</button>
     </div>
 
-    <!-- 1. CATEGORIA SOFT -->
+    <!-- 1. SOFT -->
     <div id="soft" class="conteudo-categoria">
       <h3>Coleção Soft</h3>
       <div class="grid-produtos">
-        <div class="card-produto">
-          <img src="soft-1.jpeg" alt="Casaco Soft">
-          <h4>Casaco Soft Rosa</h4>
-        </div>
-        <div class="card-produto">
-          <img src="soft-2.jpeg" alt="Colete Soft">
-          <h4>Colete Soft Estampado</h4>
-        </div>
-        <div class="card-produto">
-          <img src="soft-3.jpeg" alt="Manta Soft">
-          <h4>Manta Soft Pet</h4>
-        </div>
+        <div class="card-produto"><img src="soft-1.jpeg" alt="Casaco Soft"><h4>Casaco Soft Rosa</h4></div>
+        <div class="card-produto"><img src="soft-2.jpeg" alt="Colete Soft"><h4>Colete Soft Estampado</h4></div>
+        <div class="card-produto"><img src="soft-3.jpeg" alt="Manta Soft"><h4>Manta Soft Pet</h4></div>
       </div>
     </div>
 
-    <!-- 2. CATEGORIA FLEECE -->
+    <!-- 2. FLEECE -->
     <div id="fleece" class="conteudo-categoria">
       <h3>Coleção Fleece</h3>
       <div class="grid-produtos">
-        <div class="card-produto">
-          <img src="fleece-1.jpeg" alt="Macacão Fleece">
-          <h4>Macacão Fleece</h4>
-        </div>
-        <div class="card-produto">
-          <img src="fleece-2.jpeg" alt="Casaco Fleece">
-          <h4>Casaco Fleece Ursinho</h4>
-        </div>
-        <div class="card-produto">
-          <img src="fleece-3.jpeg" alt="Manta Fleece">
-          <h4>Mantinha Fleece</h4>
-        </div>
+        <div class="card-produto"><img src="fleece-1.jpeg" alt="Macacão Fleece"><h4>Macacão Fleece</h4></div>
+        <div class="card-produto"><img src="fleece-2.jpeg" alt="Casaco Fleece"><h4>Casaco Fleece Ursinho</h4></div>
+        <div class="card-produto"><img src="fleece-3.jpeg" alt="Manta Fleece"><h4>Mantinha Fleece</h4></div>
       </div>
     </div>
 
-    <!-- 3. CATEGORIA MOLETOM -->
+    <!-- 3. MOLETOM -->
     <div id="moletom" class="conteudo-categoria">
       <h3>Coleção Moletom</h3>
       <div class="grid-produtos">
-        <div class="card-produto">
-          <img src="moletom-1.jpeg" alt="Blusa Moletom">
-          <h4>Blusa Moletom Básica</h4>
-        </div>
-        <div class="card-produto">
-          <img src="moletom-2.jpeg" alt="Moletom Capuz">
-          <h4>Moletom Capuz Rosa</h4>
-        </div>
-        <div class="card-produto">
-          <img src="moletom-3.jpeg" alt="Moletom Estampado">
-          <h4>Moletom Bolinha</h4>
-        </div>
+        <div class="card-produto"><img src="moletom-1.jpeg" alt="Blusa Moletom"><h4>Blusa Moletom Básica</h4></div>
+        <div class="card-produto"><img src="moletom-2.jpeg" alt="Moletom Capuz"><h4>Moletom Capuz Rosa</h4></div>
+        <div class="card-produto"><img src="moletom-3.jpeg" alt="Moletom Estampado"><h4>Moletom Bolinha</h4></div>
       </div>
     </div>
 
-    <!-- 4. CATEGORIA MALHA SUEDE -->
+    <!-- 4. MALHA SUEDE -->
     <div id="suede" class="conteudo-categoria">
       <h3>Coleção Malha Suede</h3>
       <div class="grid-produtos">
-        <div class="card-produto">
-          <img src="suede-1.jpeg" alt="Vestido Suede">
-          <h4>Vestido Suede</h4>
-        </div>
-        <div class="card-produto">
-          <img src="suede-2.jpeg" alt="Camiseta Suede">
-          <h4>Camiseta Suede Macia</h4>
-        </div>
-        <div class="card-produto">
-          <img src="suede-3.jpeg" alt="Conjunto Suede">
-          <h4>Conjunto Soft & Suede</h4>
-        </div>
+        <div class="card-produto"><img src="suede-1.jpeg" alt="Vestido Suede"><h4>Vestido Suede</h4></div>
+        <div class="card-produto"><img src="suede-2.jpeg" alt="Camiseta Suede"><h4>Camiseta Suede Macia</h4></div>
+        <div class="card-produto"><img src="suede-3.jpeg" alt="Conjunto Suede"><h4>Conjunto Soft & Suede</h4></div>
       </div>
     </div>
 
-    <!-- 5. CATEGORIA SUPER-HERÓI -->
+    <!-- 5. SUPER-HERÓI -->
     <div id="superheroi" class="conteudo-categoria">
       <h3>Linha Super-Heróis</h3>
       <div class="grid-produtos">
-        <div class="card-produto">
-          <img src="heroi-1.jpeg" alt="Fantasia Herói">
-          <h4>Capa de Super-Heroína</h4>
-        </div>
-        <div class="card-produto">
-          <img src="heroi-2.jpeg" alt="Roupa Herói">
-          <h4>Vestido Mulher Maravilha</h4>
-        </div>
-        <div class="card-produto">
-          <img src="heroi-3.jpeg" alt="Capinha Pet">
-          <h4>Capinha Divertida</h4>
-        </div>
+        <div class="card-produto"><img src="heroi-1.jpeg" alt="Fantasia Herói"><h4>Capa de Super-Heroína</h4></div>
+        <div class="card-produto"><img src="heroi-2.jpeg" alt="Roupa Herói"><h4>Vestido Mulher Maravilha</h4></div>
+        <div class="card-produto"><img src="heroi-3.jpeg" alt="Capinha Pet"><h4>Capinha Divertida</h4></div>
       </div>
     </div>
 
-    <!-- 6. CATEGORIA PIJAMA -->
+    <!-- 6. PIJAMA -->
     <div id="pijama" class="conteudo-categoria">
       <h3>Linha de Pijamas</h3>
       <div class="grid-produtos">
-        <div class="card-produto">
-          <img src="pijama-1.jpeg" alt="Pijama Pet">
-          <h4>Pijama Estampa Bolinhas</h4>
-        </div>
-        <div class="card-produto">
-          <img src="pijama-2.jpeg" alt="Pijama Macacão">
-          <h4>Pijama Macacão Soltinho</h4>
-        </div>
-        <div class="card-produto">
-          <img src="pijama-3.jpeg" alt="Pijama Inverno">
-          <h4>Pijama Quentinho Soft</h4>
-        </div>
+        <div class="card-produto"><img src="pijama-1.jpeg" alt="Pijama Pet"><h4>Pijama Estampa Bolinhas</h4></div>
+        <div class="card-produto"><img src="pijama-2.jpeg" alt="Pijama Macacão"><h4>Pijama Macacão Soltinho</h4></div>
+        <div class="card-produto"><img src="pijama-3.jpeg" alt="Pijama Inverno"><h4>Pijama Quentinho Soft</h4></div>
       </div>
     </div>
+  </div>
 
+  <!-- SEÇÃO COMO COMPRAR -->
+  <div class="secao-bloco">
+    <h3>Como Encomendar</h3>
+    <div class="grid-passos">
+      <div class="card-passo">
+        <div class="numero-passo">1</div>
+        <h4>Escolha a Peça</h4>
+        <p style="font-size:0.88em; color:#666;">Navegue pelos nossos tecidos e escolha o modelo favorito.</p>
+      </div>
+      <div class="card-passo">
+        <div class="numero-passo">2</div>
+        <h4>Meça o seu Pet</h4>
+        <p style="font-size:0.88em; color:#666;">Consulte nosso Guia de Medidas abaixo para saber o tamanho ideal.</p>
+      </div>
+      <div class="card-passo">
+        <div class="numero-passo">3</div>
+        <h4>Chame no Whats</h4>
+        <p style="font-size:0.88em; color:#666;">Envie uma mensagem no WhatsApp com o modelo e as medidas!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- GUIA E TABELA DE MEDIDAS -->
+  <div class="secao-bloco">
+    <h3>Guia de Medidas Pet 📏</h3>
+    <p style="color: #666; font-size:0.95em;">Meça o seu pet com uma fita métrica antes de fazer o pedido:</p>
+
+    <table class="tabela-medidas">
+      <thead>
+        <tr>
+          <th>Tamanho</th>
+          <th>Pescoço (cm)</th>
+          <th>Tórax (cm)</th>
+          <th>Comprimento (cm)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>P</strong></td><td>22 - 26 cm</td><td>32 - 38 cm</td><td>25 - 28 cm</td></tr>
+        <tr><td><strong>M</strong></td><td>26 - 30 cm</td><td>38 - 46 cm</td><td>30 - 34 cm</td></tr>
+        <tr><td><strong>G</strong></td><td>30 - 36 cm</td><td>46 - 54 cm</td><td>35 - 40 cm</td></tr>
+        <tr><td><strong>GG</strong></td><td>36 - 42 cm</td><td>54 - 64 cm</td><td>40 - 46 cm</td></tr>
+      </tbody>
+    </table>
+
+    <div class="dicas-medicao">
+      <strong>💡 Como medir de forma simples:</strong><br>
+      • <strong>Pescoço:</strong> Meça a circunferência onde fica a coleira.<br>
+      • <strong>Tórax:</strong> Meça a parte mais larga do peito, logo atrás das patinhas dianteiras.<br>
+      • <strong>Comprimento:</strong> Meça do início do pescoço até a base do rabo.
+    </div>
+  </div>
+
+  <!-- MURAL DE DEPOIMENTOS E VÍDEOS DE CLIENTES -->
+  <div class="secao-bloco">
+    <h3>Clientes Satisfeitos 🐾📸</h3>
+    <p style="color: #666; font-size:0.95em; margin-bottom:20px;">Veja os pets da nossa família esbanjando estilo com a Bolinha Moda Pet!</p>
+
+    <div class="grid-depoimentos">
+      
+      <!-- DEPOIMENTO 1 (FOTO) -->
+      <div class="card-depoimento">
+        <!-- Substitua 'cliente-1.jpeg' pela foto enviada pelo cliente -->
+        <img src="cliente-1.jpeg" alt="Pet de Cliente">
+        <p>"A roupinha de soft ficou perfeita na Mel! Super quentinha."</p>
+        <span>— Mel (Tamanho M)</span>
+      </div>
+
+      <!-- DEPOIMENTO 2 (VÍDEO DE CACHORRINHO) -->
+      <div class="card-depoimento">
+        <!-- Você pode colocar um arquivo de vídeo .mp4 que subir para o GitHub -->
+        <video controls poster="Untitled.jpeg">
+          <source src="video-cliente.mp4" type="video/mp4">
+          Seu navegador não suporta vídeos.
+        </video>
+        <p>"Olha a alegria do Bob passeando com o moletom dele!"</p>
+        <span>— Bob (Tamanho G)</span>
+      </div>
+
+      <!-- DEPOIMENTO 3 (FOTO) -->
+      <div class="card-depoimento">
+        <img src="cliente-2.jpeg" alt="Pet de Cliente">
+        <p>"Qualidade incrível do tecido fleece. Recomendo muito!"</p>
+        <span>— Thor (Tamanho P)</span>
+      </div>
+
+    </div>
   </div>
 
   <!-- SEÇÃO DE CONTATO / ATENDIMENTO -->
-  <div id="contato" class="secao-contato">
+  <div id="contato" class="secao-bloco">
     <h3>Atendimento & Encomendas</h3>
     <p style="color: #666; margin-bottom: 20px;">Dúvidas sobre tamanhos ou tecidos? Fale diretamente com a gente!</p>
 
     <div class="grid-contatos">
-      <!-- CARD WHATSAPP -->
       <div class="card-contato">
         <span class="icone-contato">💬</span>
         <h4>WhatsApp</h4>
         <p>Atendimento rápido para pedidos e dúvidas.</p>
-        <!-- Troque o número 5500999999999 pelo seu WhatsApp real -->
-        <a href="https://wa.me/5500999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20roupinhas%20pet!" target="_blank" class="btn-whatsapp">
+        <!-- LEMBRE DE TROCAR O NÚMERO ABAIXO PELO SEU TELEFONE REAL -->
+        <a href="https://wa.me/5500999999999?text=Olá,%20gostaria%20de%20fazer%20um%20pedido!" target="_blank" class="btn-whatsapp">
           Chamar no WhatsApp
         </a>
       </div>
 
-      <!-- CARD HORÁRIO E ENTREGAS -->
       <div class="card-contato">
         <span class="icone-contato">🛍️</span>
         <h4>Encomendas</h4>
@@ -476,7 +611,13 @@
     </div>
   </div>
 
-  <!-- RODAPÉ DA PÁGINA -->
+  <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+  <!-- LEMBRE DE TROCAR O NÚMERO ABAIXO PELO SEU TELEFONE REAL -->
+  <a href="https://wa.me/5500999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20roupinhas!" class="whatsapp-flutuante" target="_blank">
+    💬 WhatsApp
+  </a>
+
+  <!-- RODAPÉ -->
   <footer>
     <p>© Bolinha Moda Pet - Todos os direitos reservados</p>
   </footer>
