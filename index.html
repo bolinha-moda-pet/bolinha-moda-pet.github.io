@@ -8,37 +8,50 @@
   <style>
     body {
         font-family: Arial, sans-serif;
-        background-color: #fff5f7;
+        background-color: #fff5f7; /* Fundo rosa bem claro (a parte branca/suave) */
         color: #4a4a4a;
         margin: 0;
         padding: 0;
     }
 
     header {
-        background-color: #ff69b4;
+        background-color: #ff69b4; /* Cabeçalho rosa choque */
         color: white;
         text-align: center;
         padding: 25px 10px;
     }
 
-    nav a {
-        color: #5c0632;
-        text-decoration: none;
-        margin: 0 12px;
+    .alerta-preco {
+        background-color: #ff1493;
+        color: white;
+        text-align: center;
+        padding: 10px;
         font-weight: bold;
     }
 
-    .card-produto.especial {
-        border: 2px solid #ff1493;
-        background-color: #fff0f5;
+    /* Estilo do bloco de tecidos na parte branca */
+    .menu-tecidos {
+        background-color: #ffffff; /* Caixa branca no fundo suave */
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 15px;
+        border-radius: 12px;
+        border: 2px solid #ffb6c1;
+        text-align: center;
     }
 
-    .tag-especial {
-        background-color: #ff1493;
-        color: white;
-        padding: 4px 8px; 
-        font-size: 0.8em;
-        border-radius: 12px;
+    .menu-tecidos a {
+        color: #5c0632;
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: bold;
+        display: inline-block;
+        padding: 5px 10px;
+    }
+
+    .menu-tecidos a:hover {
+        background-color: #ffe6f0;
+        border-radius: 5px;
     }
   </style>
 </head>
@@ -49,15 +62,20 @@
     <p>Roupas e acessórios para o seu amigo!</p>
   </header>
 
-  <nav>
-    <a href="#">Tecidos</a>
+  <div class="alerta-preco">
+    💖 Peças exclusivas de R$ 10,00 a R$ 35,00! 💖
+  </div>
+
+  <!-- Bloco de Tecidos Posicionado na Parte Clara -->
+  <div class="menu-tecidos">
+    <a href="#">Tecidos:</a>
     <a href="#">Soft</a>
     <a href="#">Fleece</a>
     <a href="#">Moletom</a>
     <a href="#">Malha Suede</a>
     <a href="#">Roupas de Super Herói</a>
     <a href="#">Pijama</a>
-  </nav>
+  </div>
 
 </body>
 </html>
