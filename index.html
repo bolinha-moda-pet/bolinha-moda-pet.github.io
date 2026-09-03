@@ -14,11 +14,16 @@
         padding: 0;
     }
 
+    /* Cabeçalho com a foto da cachorrinha no fundo */
     header {
-        background-color: #ff69b4;
+        background: linear-gradient(rgba(255, 105, 180, 0.65), rgba(255, 105, 180, 0.65)), 
+                    url('Untitled.jpg');
+        background-size: cover;
+        background-position: center;
         color: white;
         text-align: center;
-        padding: 25px 10px;
+        padding: 50px 10px;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto para destacar */
     }
 
     .alerta-preco {
@@ -29,7 +34,7 @@
         font-weight: bold;
     }
 
-    /* Caixa Moderna com o Título Em Cima */
+    /* Bloco de tecidos na parte clara */
     .menu-tecidos {
         background-color: #ffffff;
         max-width: 800px;
@@ -40,14 +45,13 @@
         text-align: center;
     }
 
-    /* Estilo do Título "Tecidos" em cima */
     .menu-tecidos h3 {
-        color: #d81b60; /* Rosa escuro */
+        color: #d81b60;
         margin-top: 0;
         margin-bottom: 12px;
         font-size: 1.2em;
-        text-transform: uppercase; /* Deixa em letras maiúsculas */
-        letter-spacing: 1px; /* Espaçamento entre as letras */
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
     .menu-tecidos a {
@@ -76,7 +80,6 @@
     💖 Peças exclusivas de R$ 10,00 a R$ 35,00! 💖
   </div>
 
-  <!-- Bloco de Tecidos com Título no Topo -->
   <div class="menu-tecidos">
     <h3>Tecidos</h3>
     <a href="#">Soft</a>
