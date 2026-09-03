@@ -7,7 +7,7 @@
 
   <style>
     /* ==========================================================
-       1. PALETA DE CORES E ESTILOS GERAIS
+       1. ESTILOS GERAIS E DECORAÇÕES LATERAIS
        ========================================================== */
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -16,6 +16,8 @@
         margin: 0;
         padding: 0;
         scroll-behavior: smooth;
+        background-image: radial-gradient(#f0d5df 1px, transparent 1px);
+        background-size: 30px 30px;
     }
 
     /* ==========================================================
@@ -47,7 +49,7 @@
     }
 
     /* ==========================================================
-       3. FAIXA DE ALERTA DE PREÇOS
+       3. FAIXA DE PREÇOS
        ========================================================== */
     .alerta-preco {
         background-color: #c2597f;
@@ -61,7 +63,7 @@
     }
 
     /* ==========================================================
-       4. BOTÃO REDIRECIONADOR DE CONTATO
+       4. BOTÃO REDIRECIONADOR
        ========================================================== */
     .area-chamada-contato {
         text-align: center;
@@ -88,17 +90,21 @@
     }
 
     /* ==========================================================
-       5. CAIXA PRINCIPAL DE CATEGORIAS
+       5. PAINÉIS MODERNOS COM MOLDURA DECORATIVA LATERAL
        ========================================================== */
-    .menu-tecidos {
+    .painel-moderno {
         background-color: #ffffff;
         max-width: 900px;
-        margin: 30px auto;
-        padding: 30px 20px;
-        border-radius: 16px;
-        border: 1px solid #f0d5df;
-        box-shadow: 0 8px 20px rgba(194, 89, 127, 0.08);
+        margin: 35px auto;
+        padding: 35px 25px;
+        border-radius: 18px;
+        border-left: 6px solid #c2597f;
+        border-right: 6px solid #c2597f;
+        border-top: 1px solid #f0d5df;
+        border-bottom: 1px solid #f0d5df;
+        box-shadow: 0 10px 25px rgba(194, 89, 127, 0.08);
         text-align: center;
+        position: relative;
     }
 
     .titulo-patinhas {
@@ -125,7 +131,7 @@
         gap: 10px;
     }
 
-    .menu-tecidos button {
+    .botoes-categorias button {
         background-color: #fdf8fa;
         border: 1px solid #e0b8c6;
         color: #7a2848;
@@ -137,7 +143,7 @@
         transition: all 0.3s ease;
     }
 
-    .menu-tecidos button:hover {
+    .botoes-categorias button:hover {
         background-color: #c2597f;
         color: #ffffff;
         border-color: #c2597f;
@@ -199,28 +205,8 @@
     }
 
     /* ==========================================================
-       6. SEÇÃO "COMO COMPRAR"
+       6. SEÇÃO "COMO ENCOMENDAR"
        ========================================================== */
-    .secao-bloco {
-        background-color: #ffffff;
-        max-width: 900px;
-        margin: 30px auto;
-        padding: 30px 20px;
-        border-radius: 16px;
-        border: 1px solid #f0d5df;
-        box-shadow: 0 8px 20px rgba(194, 89, 127, 0.08);
-        text-align: center;
-    }
-
-    .secao-bloco h3 {
-        color: #9e3b61;
-        font-size: 1.3em;
-        margin-top: 0;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
     .grid-passos {
         display: flex;
         flex-wrap: wrap;
@@ -250,46 +236,35 @@
     }
 
     /* ==========================================================
-       7. SEÇÃO "GUIA DE MEDIDAS"
+       7. TUTORIAL DE MEDIÇÃO DO PET
        ========================================================== */
-    .tabela-medidas {
-        width: 100%;
-        max-width: 600px;
-        margin: 20px auto;
-        border-collapse: collapse;
-        background: #ffffff;
-        border-radius: 8px;
-        overflow: hidden;
-        border: 1px solid #f0d5df;
-    }
-
-    .tabela-medidas th {
-        background-color: #c2597f;
-        color: white;
-        padding: 12px;
-        font-size: 0.95em;
-    }
-
-    .tabela-medidas td {
-        padding: 10px;
-        border-bottom: 1px solid #f8e8ee;
-        color: #555;
-        font-size: 0.9em;
-    }
-
-    .dicas-medicao {
+    .box-tutorial-medidas {
         background-color: #fdf8fa;
-        border-left: 4px solid #c2597f;
-        padding: 15px;
-        margin: 20px auto 0 auto;
-        max-width: 700px;
+        border: 1px solid #f0d5df;
+        border-radius: 12px;
+        padding: 25px;
+        max-width: 650px;
+        margin: 0 auto;
         text-align: left;
-        font-size: 0.9em;
-        color: #666;
+    }
+
+    .item-tutorial {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 18px;
+    }
+
+    .item-tutorial:last-child {
+        margin-bottom: 0;
+    }
+
+    .icone-passo-medida {
+        font-size: 1.5em;
     }
 
     /* ==========================================================
-       8. MURAL DE DEPOIMENTOS (FOTOS E VÍDEOS DE CLIENTES)
+       8. MURAL DE DEPOIMENTOS
        ========================================================== */
     .grid-depoimentos {
         display: flex;
@@ -307,7 +282,7 @@
         box-shadow: 0 4px 10px rgba(0,0,0,0.03);
     }
 
-    .card-depoimento media, .card-depoimento img, .card-depoimento video {
+    .card-depoimento img, .card-depoimento video {
         width: 100%;
         height: 250px;
         object-fit: cover;
@@ -331,7 +306,7 @@
     }
 
     /* ==========================================================
-       9. SEÇÃO DE CONTATO E ATENDIMENTO
+       9. CONTATO & WHATSAPP
        ========================================================== */
     .grid-contatos {
         display: flex;
@@ -371,7 +346,6 @@
         background-color: #1eb956;
     }
 
-    /* BOTÃO FLUTUANTE DO WHATSAPP NO CANTO DA TELA */
     .whatsapp-flutuante {
         position: fixed;
         bottom: 20px;
@@ -413,18 +387,18 @@
     <p>Conforto e elegância para o seu melhor amigo</p>
   </header>
 
-  <!-- FAIXA DE ALERTA DE PREÇOS -->
+  <!-- FAIXA DE PREÇOS -->
   <div class="alerta-preco">
     Todas as peças com valores de R$ 10,00 a R$ 35,00!
   </div>
 
-  <!-- BOTÃO REDIRECIONADOR PARA CONTATO -->
+  <!-- BOTÃO REDIRECIONADOR DE CONTATO -->
   <div class="area-chamada-contato">
     <a href="#contato" class="btn-contato-redirecionar">Entre em contato conosco por aqui</a>
   </div>
 
-  <!-- CAIXA DE CATEGORIAS DOS TECIDOS -->
-  <div class="menu-tecidos">
+  <!-- PAINEL DE CATEGORIAS -->
+  <div class="painel-moderno">
     <h3 class="titulo-patinhas">
       <span class="icone-patinha">🐾</span> Tecidos <span class="icone-patinha">🐾</span>
     </h3>
@@ -434,13 +408,13 @@
       <button onclick="mostrarCategoria('fleece')">Fleece</button>
       <button onclick="mostrarCategoria('moletom')">Moletom</button>
       <button onclick="mostrarCategoria('suede')">Malha Suede</button>
-      <button onclick="mostrarCategoria('superheroi')">Roupas de Super-Herói</button>
+      <button onclick="mostrarCategoria('superheroi')">Estampa de Super-Herói</button>
       <button onclick="mostrarCategoria('pijama')">Pijama</button>
     </div>
 
     <!-- 1. SOFT -->
     <div id="soft" class="conteudo-categoria">
-      <h3>Coleção Soft</h3>
+      <h3 style="color:#9e3b61;">Coleção Soft</h3>
       <div class="grid-produtos">
         <div class="card-produto"><img src="soft-1.jpeg" alt="Casaco Soft"><h4>Casaco Soft Rosa</h4></div>
         <div class="card-produto"><img src="soft-2.jpeg" alt="Colete Soft"><h4>Colete Soft Estampado</h4></div>
@@ -450,7 +424,7 @@
 
     <!-- 2. FLEECE -->
     <div id="fleece" class="conteudo-categoria">
-      <h3>Coleção Fleece</h3>
+      <h3 style="color:#9e3b61;">Coleção Fleece</h3>
       <div class="grid-produtos">
         <div class="card-produto"><img src="fleece-1.jpeg" alt="Macacão Fleece"><h4>Macacão Fleece</h4></div>
         <div class="card-produto"><img src="fleece-2.jpeg" alt="Casaco Fleece"><h4>Casaco Fleece Ursinho</h4></div>
@@ -460,7 +434,7 @@
 
     <!-- 3. MOLETOM -->
     <div id="moletom" class="conteudo-categoria">
-      <h3>Coleção Moletom</h3>
+      <h3 style="color:#9e3b61;">Coleção Moletom</h3>
       <div class="grid-produtos">
         <div class="card-produto"><img src="moletom-1.jpeg" alt="Blusa Moletom"><h4>Blusa Moletom Básica</h4></div>
         <div class="card-produto"><img src="moletom-2.jpeg" alt="Moletom Capuz"><h4>Moletom Capuz Rosa</h4></div>
@@ -470,7 +444,7 @@
 
     <!-- 4. MALHA SUEDE -->
     <div id="suede" class="conteudo-categoria">
-      <h3>Coleção Malha Suede</h3>
+      <h3 style="color:#9e3b61;">Coleção Malha Suede</h3>
       <div class="grid-produtos">
         <div class="card-produto"><img src="suede-1.jpeg" alt="Vestido Suede"><h4>Vestido Suede</h4></div>
         <div class="card-produto"><img src="suede-2.jpeg" alt="Camiseta Suede"><h4>Camiseta Suede Macia</h4></div>
@@ -478,126 +452,135 @@
       </div>
     </div>
 
-    <!-- 5. SUPER-HERÓI -->
+    <!-- 5. ESTAMPA DE SUPER-HERÓI -->
     <div id="superheroi" class="conteudo-categoria">
-      <h3>Linha Super-Heróis</h3>
+      <h3 style="color:#9e3b61;">Roupas com Estampa de Super-Herói</h3>
       <div class="grid-produtos">
-        <div class="card-produto"><img src="heroi-1.jpeg" alt="Fantasia Herói"><h4>Capa de Super-Heroína</h4></div>
-        <div class="card-produto"><img src="heroi-2.jpeg" alt="Roupa Herói"><h4>Vestido Mulher Maravilha</h4></div>
-        <div class="card-produto"><img src="heroi-3.jpeg" alt="Capinha Pet"><h4>Capinha Divertida</h4></div>
+        <div class="card-produto">
+          <img src="heroi.jpeg" alt="Roupa com Estampa de Super-Herói">
+          <h4>Roupa Estampa Super-Herói</h4>
+        </div>
       </div>
     </div>
 
     <!-- 6. PIJAMA -->
     <div id="pijama" class="conteudo-categoria">
-      <h3>Linha de Pijamas</h3>
+      <h3 style="color:#9e3b61;">Pijama Pet</h3>
       <div class="grid-produtos">
-        <div class="card-produto"><img src="pijama-1.jpeg" alt="Pijama Pet"><h4>Pijama Estampa Bolinhas</h4></div>
-        <div class="card-produto"><img src="pijama-2.jpeg" alt="Pijama Macacão"><h4>Pijama Macacão Soltinho</h4></div>
-        <div class="card-produto"><img src="pijama-3.jpeg" alt="Pijama Inverno"><h4>Pijama Quentinho Soft</h4></div>
+        <div class="card-produto">
+          <img src="pijama.jpeg" alt="Pijama Pet">
+          <h4>Pijama Estampa Bolinhas</h4>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- SEÇÃO COMO COMPRAR -->
-  <div class="secao-bloco">
-    <h3>Como Encomendar</h3>
+  <!-- PAINEL COMO ENCOMENDAR -->
+  <div class="painel-moderno">
+    <h3 class="titulo-patinhas">
+      <span class="icone-patinha">🐾</span> Como Encomendar <span class="icone-patinha">🐾</span>
+    </h3>
     <div class="grid-passos">
       <div class="card-passo">
         <div class="numero-passo">1</div>
-        <h4>Escolha a Peça</h4>
-        <p style="font-size:0.88em; color:#666;">Navegue pelos nossos tecidos e escolha o modelo favorito.</p>
+        <h4>Escolha o Modelo</h4>
+        <p style="font-size:0.88em; color:#666;">Clique nos tecidos acima e escolha a roupinha perfeita.</p>
       </div>
       <div class="card-passo">
         <div class="numero-passo">2</div>
         <h4>Meça o seu Pet</h4>
-        <p style="font-size:0.88em; color:#666;">Consulte nosso Guia de Medidas abaixo para saber o tamanho ideal.</p>
+        <p style="font-size:0.88em; color:#666;">Siga nosso tutorial abaixo usando uma fita métrica.</p>
       </div>
       <div class="card-passo">
         <div class="numero-passo">3</div>
-        <h4>Chame no Whats</h4>
-        <p style="font-size:0.88em; color:#666;">Envie uma mensagem no WhatsApp com o modelo e as medidas!</p>
+        <h4>Peça no Whats</h4>
+        <p style="font-size:0.88em; color:#666;">Envie as medidas do seu pet pra gente no WhatsApp!</p>
       </div>
     </div>
   </div>
 
-  <!-- GUIA E TABELA DE MEDIDAS -->
-  <div class="secao-bloco">
-    <h3>Guia de Medidas Pet 📏</h3>
-    <p style="color: #666; font-size:0.95em;">Meça o seu pet com uma fita métrica antes de fazer o pedido:</p>
+  <!-- PAINEL TUTORIAL DE MEDIÇÃO -->
+  <div class="painel-moderno">
+    <h3 class="titulo-patinhas">
+      <span class="icone-patinha">🐾</span> Como Medir o seu Pet <span class="icone-patinha">🐾</span>
+    </h3>
+    <p style="color: #666; font-size:0.95em; margin-bottom: 20px;">Utilize uma fita métrica para tirar as medidas do seu amigo antes de fazer o pedido:</p>
 
-    <table class="tabela-medidas">
-      <thead>
-        <tr>
-          <th>Tamanho</th>
-          <th>Pescoço (cm)</th>
-          <th>Tórax (cm)</th>
-          <th>Comprimento (cm)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>P</strong></td><td>22 - 26 cm</td><td>32 - 38 cm</td><td>25 - 28 cm</td></tr>
-        <tr><td><strong>M</strong></td><td>26 - 30 cm</td><td>38 - 46 cm</td><td>30 - 34 cm</td></tr>
-        <tr><td><strong>G</strong></td><td>30 - 36 cm</td><td>46 - 54 cm</td><td>35 - 40 cm</td></tr>
-        <tr><td><strong>GG</strong></td><td>36 - 42 cm</td><td>54 - 64 cm</td><td>40 - 46 cm</td></tr>
-      </tbody>
-    </table>
+    <div class="box-tutorial-medidas">
+      <div class="item-tutorial">
+        <span class="icone-passo-medida">📏</span>
+        <div>
+          <strong style="color:#9e3b61;">1. Pescoço:</strong>
+          <p style="margin:3px 0 0 0; color:#555; font-size:0.9em;">Passe a fita métrica ao redor do pescoço, na altura onde fica a coleira.</p>
+        </div>
+      </div>
 
-    <div class="dicas-medicao">
-      <strong>💡 Como medir de forma simples:</strong><br>
-      • <strong>Pescoço:</strong> Meça a circunferência onde fica a coleira.<br>
-      • <strong>Tórax:</strong> Meça a parte mais larga do peito, logo atrás das patinhas dianteiras.<br>
-      • <strong>Comprimento:</strong> Meça do início do pescoço até a base do rabo.
+      <div class="item-tutorial">
+        <span class="icone-passo-medida">🐕</span>
+        <div>
+          <strong style="color:#9e3b61;">2. Tórax (Peitoral):</strong>
+          <p style="margin:3px 0 0 0; color:#555; font-size:0.9em;">Meça a parte mais larga do peito do seu pet, bem atrás das patas dianteiras.</p>
+        </div>
+      </div>
+
+      <div class="item-tutorial">
+        <span class="icone-passo-medida">✨</span>
+        <div>
+          <strong style="color:#9e3b61;">3. Comprimento:</strong>
+          <p style="margin:3px 0 0 0; color:#555; font-size:0.9em;">Meça do início do pescoço (onde começa a coleira) até o início do rabo.</p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- MURAL DE DEPOIMENTOS E VÍDEOS DE CLIENTES -->
-  <div class="secao-bloco">
-    <h3>Clientes Satisfeitos 🐾📸</h3>
-    <p style="color: #666; font-size:0.95em; margin-bottom:20px;">Veja os pets da nossa família esbanjando estilo com a Bolinha Moda Pet!</p>
+  <!-- PAINEL MURAL DE DEPOIMENTOS -->
+  <div class="painel-moderno">
+    <h3 class="titulo-patinhas">
+      <span class="icone-patinha">🐾</span> Clientes Satisfeitos <span class="icone-patinha">🐾</span>
+    </h3>
+    <p style="color: #666; font-size:0.95em; margin-bottom:20px;">Veja a fofura dos nossos clientes vestindo Bolinha Moda Pet!</p>
 
     <div class="grid-depoimentos">
       
-      <!-- DEPOIMENTO 1 (FOTO) -->
+      <!-- DEPOIMENTO 1: GATO (Ravena) -->
       <div class="card-depoimento">
-        <!-- Substitua 'cliente-1.jpeg' pela foto enviada pelo cliente -->
-        <img src="cliente-1.jpeg" alt="Pet de Cliente">
-        <p>"A roupinha de soft ficou perfeita na Mel! Super quentinha."</p>
-        <span>— Mel (Tamanho M)</span>
+        <img src="Gato.jpeg" alt="Gatinha Ravena">
+        <p>"Ravena com roupinha de algodao docr-super estilosa,quentinha e muito lindaaa"</p>
+        <span>— Ravena 🐱</span>
       </div>
 
-      <!-- DEPOIMENTO 2 (VÍDEO DE CACHORRINHO) -->
+      <!-- DEPOIMENTO 2: VÍDEO -->
       <div class="card-depoimento">
-        <!-- Você pode colocar um arquivo de vídeo .mp4 que subir para o GitHub -->
         <video controls poster="Untitled.jpeg">
           <source src="video-cliente.mp4" type="video/mp4">
           Seu navegador não suporta vídeos.
         </video>
-        <p>"Olha a alegria do Bob passeando com o moletom dele!"</p>
-        <span>— Bob (Tamanho G)</span>
+        <p>"Olha a alegria passeando com o look novinho!"</p>
+        <span>— Cliente VIP (Vídeo)</span>
       </div>
 
-      <!-- DEPOIMENTO 3 (FOTO) -->
+      <!-- DEPOIMENTO 3: POODLE -->
       <div class="card-depoimento">
-        <img src="cliente-2.jpeg" alt="Pet de Cliente">
-        <p>"Qualidade incrível do tecido fleece. Recomendo muito!"</p>
-        <span>— Thor (Tamanho P)</span>
+        <img src="Poodle.jpeg" alt="Poodle de Roupinha">
+        <p>"Super felizes com suas roupas novas"</p>
+        <span>— Cliente VIP 🐩</span>
       </div>
 
     </div>
   </div>
 
-  <!-- SEÇÃO DE CONTATO / ATENDIMENTO -->
-  <div id="contato" class="secao-bloco">
-    <h3>Atendimento & Encomendas</h3>
-    <p style="color: #666; margin-bottom: 20px;">Dúvidas sobre tamanhos ou tecidos? Fale diretamente com a gente!</p>
+  <!-- PAINEL DE CONTATO -->
+  <div id="contato" class="painel-moderno">
+    <h3 class="titulo-patinhas">
+      <span class="icone-patinha">🐾</span> Atendimento & Encomendas <span class="icone-patinha">🐾</span>
+    </h3>
+    <p style="color: #666; margin-bottom: 20px;">Dúvidas sobre o tamanho ou estampas? Fale com a gente!</p>
 
     <div class="grid-contatos">
       <div class="card-contato">
         <span class="icone-contato">💬</span>
         <h4>WhatsApp</h4>
-        <p>Atendimento rápido para pedidos e dúvidas.</p>
-        <!-- LEMBRE DE TROCAR O NÚMERO ABAIXO PELO SEU TELEFONE REAL -->
+        <p>Atendimento rápido para tirar dúvidas e realizar pedidos.</p>
         <a href="https://wa.me/5500999999999?text=Olá,%20gostaria%20de%20fazer%20um%20pedido!" target="_blank" class="btn-whatsapp">
           Chamar no WhatsApp
         </a>
@@ -612,7 +595,6 @@
   </div>
 
   <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
-  <!-- LEMBRE DE TROCAR O NÚMERO ABAIXO PELO SEU TELEFONE REAL -->
   <a href="https://wa.me/5500999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20roupinhas!" class="whatsapp-flutuante" target="_blank">
     💬 WhatsApp
   </a>
@@ -622,7 +604,7 @@
     <p>© Bolinha Moda Pet - Todos os direitos reservados</p>
   </footer>
 
-  <!-- SCRIPT PARA ABRIR/FECHAR CATEGORIAS -->
+  <!-- SCRIPT -->
   <script>
     function mostrarCategoria(idCategoria) {
       var categorias = document.querySelectorAll('.conteudo-categoria');
