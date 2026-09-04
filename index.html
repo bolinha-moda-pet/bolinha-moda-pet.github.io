@@ -510,55 +510,73 @@
       margin-top: 30px;
     }
 
-    /* ==========================================================
-       8. ADAPTAÇÃO COMPLETA PARA DISPOSITIVOS MÓVEIS (RESPONSIVO)
-       ========================================================== */
-    @media (max-width: 768px) {
-      .painel-dicas-lateral, 
-      .decoracao-rosa-lateral {
-        display: none !important;
-      }
+/* ==========================================================
+   8. ADAPTAÇÃO COMPLETA PARA DISPOSITIVOS MÓVEIS (RESPONSIVO)
+   ========================================================== */
+@media (max-width: 768px) {
+  .painel-dicas-lateral, 
+  .decoracao-rosa-lateral {
+    display: none !important;
+  }
 
-      body {
-        padding: 0 10px;
-      }
+  body {
+    padding: 0 5px;
+  }
 
-      header h1 {
-        font-size: 1.6em;
-      }
+  header h1 {
+    font-size: 1.5em;
+  }
 
-      header p {
-        font-size: 0.9em;
-      }
+  header p {
+    font-size: 0.85em;
+  }
 
-      .painel-moderno {
-        margin: 18px auto;
-        padding: 20px 12px;
-        border-left: 4px solid var(--primary-pink);
-        border-right: 4px solid var(--primary-pink);
-      }
+  .painel-moderno {
+    margin: 15px auto;
+    padding: 16px 10px;
+    border-left: 3px solid var(--primary-pink);
+    border-right: 3px solid var(--primary-pink);
+  }
 
-      .botoes-categorias {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-        width: 100%;
-      }
+  /* Ajuste dos botões no mobile para não vazar imagem e texto */
+  .botoes-categorias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    width: 100%;
+  }
 
-      .btn-aba {
-        width: 100%;
-        padding: 8px 10px;
-        font-size: 0.82em;
-        justify-content: flex-start;
-      }
+  .btn-aba {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.78em; /* Reduz ligeiramente a fonte no mobile */
+    justify-content: flex-start;
+    box-sizing: border-box;
+    min-width: 0; /* Previne estouro de flexbox/grid */
+  }
 
-      .card-produto, .card-passo, .card-depoimento, .card-contato {
-        max-width: 100%;
-      }
-    }
-  </style>
+  /* Reduz o tamanho das fotos dentro dos botões no mobile */
+  .btn-aba img {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  /* Impede que textos longos (ex: Malha Suede) estourem o botão */
+  .btn-aba span {
+    white-space: normal;
+    text-align: left;
+    line-height: 1.1;
+    overflow: hidden;
+  }
+
+  .card-produto, .card-passo, .card-depoimento, .card-contato {
+    max-width: 100%;
+  }
+}
+</style>
 </head>
-<body>
+<body><
 
   <!-- DECORAÇÃO DE ROSAS LATERAIS -->
   <div class="decoracao-rosa-lateral decoracao-rosa-esquerda">
