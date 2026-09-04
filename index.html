@@ -67,7 +67,6 @@
     .decoracao-rosa-esquerda { left: 5px; }
     .decoracao-rosa-direita { right: 5px; }
 
-    /* Cards laterais com dicas decorativas */
     .painel-dicas-lateral {
       position: fixed;
       top: 120px;
@@ -226,7 +225,7 @@
     }
 
     /* ==========================================================
-       5. BOTÕES DE CATEGORIAS (AJUSTADO PARA CORRIGIR FONTE/LAYOUT)
+       5. BOTÕES DE CATEGORIAS (CORREÇÃO DE TEXTO DUPLICADO / BUG)
        ========================================================== */
     .botoes-categorias {
       display: flex;
@@ -249,12 +248,13 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
       transition: all 0.25s ease-in-out;
-      line-height: 1;
       outline: none;
+      text-shadow: none;
     }
 
+    /* Evita que o texto alt de imagens quebradas apareça e duplique */
     .btn-aba img {
       width: 28px;
       height: 28px;
@@ -262,11 +262,13 @@
       object-fit: cover;
       flex-shrink: 0;
       display: block;
+      color: transparent;
+      font-size: 0;
     }
 
     .btn-aba span {
       display: inline-block;
-      vertical-align: middle;
+      white-space: nowrap;
     }
 
     .btn-aba:hover, .btn-aba.ativo {
@@ -577,28 +579,28 @@
     <a href="#contato" class="btn-contato-redirecionar">Entre em contato conosco por aqui</a>
   </div>
 
-  <!-- PAINEL DE CATEGORIAS -->
+  <!-- PAINEL DE CATEGORIAS DE TECIDOS -->
   <div class="painel-moderno">
     <h3 class="titulo-patinhas">
       <span class="icone-patinha">🐾</span> Tecidos <span class="icone-patinha">🐾</span>
     </h3>
 
-    <!-- BOTÕES DE CATEGORIA (ORGANIZADOS COM A TAG SPAN) -->
+    <!-- BOTÕES SEM ALT TEXT DUPLICADO -->
     <div class="botoes-categorias">
       <button class="btn-aba" onclick="mostrarCategoria('soft', this)">
-        <img src="soft-1.jpeg" alt="Soft">
+        <img src="soft-1.jpeg" alt="">
         <span>Soft</span>
       </button>
       <button class="btn-aba" onclick="mostrarCategoria('fleece', this)">
-        <img src="fleece-1.jpeg" alt="Fleece">
+        <img src="fleece-1.jpeg" alt="">
         <span>Fleece</span>
       </button>
       <button class="btn-aba" onclick="mostrarCategoria('moletom', this)">
-        <img src="moletom-1.jpeg" alt="Moletom">
+        <img src="moletom-1.jpeg" alt="">
         <span>Moletom</span>
       </button>
       <button class="btn-aba" onclick="mostrarCategoria('suede', this)">
-        <img src="suede-1.jpeg" alt="Suede">
+        <img src="suede-1.jpeg" alt="">
         <span>Malha Suede</span>
       </button>
     </div>
@@ -607,7 +609,7 @@
     <div id="soft" class="conteudo-categoria">
       <h3>Coleção Soft</h3>
       <div class="grid-produtos">
-        <div class="card-produto"><img src="soft-1.jpeg" alt="Casaco Soft"><h4>Roupa Soft Pet</h4></div>
+        <div class="card-produto"><img src="soft-1.jpeg" alt="Roupa Soft"><h4 style="margin-top:10px;">Roupa Soft Pet</h4></div>
       </div>
     </div>
 
@@ -615,7 +617,7 @@
     <div id="fleece" class="conteudo-categoria">
       <h3>Coleção Fleece</h3>
       <div class="grid-produtos">
-        <div class="card-produto"><img src="fleece-1.jpeg" alt="Macacão Fleece"><h4>Roupa Fleece Pet</h4></div>
+        <div class="card-produto"><img src="fleece-1.jpeg" alt="Roupa Fleece"><h4 style="margin-top:10px;">Roupa Fleece Pet</h4></div>
       </div>
     </div>
 
@@ -623,7 +625,7 @@
     <div id="moletom" class="conteudo-categoria">
       <h3>Coleção Moletom</h3>
       <div class="grid-produtos">
-        <div class="card-produto"><img src="moletom-1.jpeg" alt="Blusa Moletom"><h4>Roupa Moletom Pet</h4></div>
+        <div class="card-produto"><img src="moletom-1.jpeg" alt="Roupa Moletom"><h4 style="margin-top:10px;">Roupa Moletom Pet</h4></div>
       </div>
     </div>
 
@@ -631,7 +633,7 @@
     <div id="suede" class="conteudo-categoria">
       <h3>Coleção Malha Suede</h3>
       <div class="grid-produtos">
-        <div class="card-produto"><img src="suede-1.jpeg" alt="Vestido Suede"><h4>Roupa Malha Suede Pet</h4></div>
+        <div class="card-produto"><img src="suede-1.jpeg" alt="Roupa Suede"><h4 style="margin-top:10px;">Roupa Malha Suede Pet</h4></div>
       </div>
     </div>
   </div>
