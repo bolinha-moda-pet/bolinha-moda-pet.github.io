@@ -37,7 +37,7 @@
        2. ESTILOS GERAIS, TEXTURA DE BOLINHAS & PAINÉIS LATERAIS
        ========================================================== */
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
       margin: 0;
@@ -226,28 +226,33 @@
     }
 
     /* ==========================================================
-       5. BOTÕES DE CATEGORIAS COM IMAGEM LATERAIS
+       5. BOTÕES DE CATEGORIAS (AJUSTADO PARA CORRIGIR FONTE/LAYOUT)
        ========================================================== */
     .botoes-categorias {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
+      align-items: center;
+      gap: 12px;
     }
 
     .btn-aba {
       background-color: var(--card-sub-bg);
       border: 1px solid var(--border-color);
       color: var(--text-color);
+      font-family: inherit;
       font-weight: 600;
       font-size: 0.95em;
-      padding: 8px 16px;
+      padding: 8px 18px;
       border-radius: 25px;
       cursor: pointer;
-      display: flex;
+      display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
-      transition: all 0.3s ease;
+      transition: all 0.25s ease-in-out;
+      line-height: 1;
+      outline: none;
     }
 
     .btn-aba img {
@@ -255,6 +260,13 @@
       height: 28px;
       border-radius: 50%;
       object-fit: cover;
+      flex-shrink: 0;
+      display: block;
+    }
+
+    .btn-aba span {
+      display: inline-block;
+      vertical-align: middle;
     }
 
     .btn-aba:hover, .btn-aba.ativo {
@@ -270,6 +282,13 @@
       padding-top: 25px;
       border-top: 1px solid var(--border-color);
       text-align: center;
+    }
+
+    .conteudo-categoria h3 {
+      color: var(--dark-pink);
+      font-size: 1.25em;
+      margin-top: 0;
+      margin-bottom: 15px;
     }
 
     .conteudo-categoria.ativo {
@@ -500,7 +519,6 @@
       margin-top: 40px;
     }
 
-    /* Oculta os elementos das bordas em telas menores/celulares */
     @media (max-width: 1280px) {
       .painel-dicas-lateral { display: none; }
       .decoracao-rosa-lateral { display: none; }
@@ -565,23 +583,23 @@
       <span class="icone-patinha">🐾</span> Tecidos <span class="icone-patinha">🐾</span>
     </h3>
 
-    <!-- BOTOES DE CATEGORIA COM MINI-IMAGENS LATERAIS -->
+    <!-- BOTÕES DE CATEGORIA (ORGANIZADOS COM A TAG SPAN) -->
     <div class="botoes-categorias">
       <button class="btn-aba" onclick="mostrarCategoria('soft', this)">
         <img src="soft-1.jpeg" alt="Soft">
-        Soft
+        <span>Soft</span>
       </button>
       <button class="btn-aba" onclick="mostrarCategoria('fleece', this)">
         <img src="fleece-1.jpeg" alt="Fleece">
-        Fleece
+        <span>Fleece</span>
       </button>
       <button class="btn-aba" onclick="mostrarCategoria('moletom', this)">
         <img src="moletom-1.jpeg" alt="Moletom">
-        Moletom
+        <span>Moletom</span>
       </button>
       <button class="btn-aba" onclick="mostrarCategoria('suede', this)">
         <img src="suede-1.jpeg" alt="Suede">
-        Malha Suede
+        <span>Malha Suede</span>
       </button>
     </div>
 
@@ -684,21 +702,18 @@
     <p style="opacity:0.8; font-size:0.95em; margin-bottom:20px;">Veja a fofura dos nossos clientes vestindo Bolinha Moda Pet!</p>
 
     <div class="grid-depoimentos">
-      <!-- DEPOIMENTO 1: GATO (MANTIDO INTACTO) -->
       <div class="card-depoimento">
         <img src="Gato.jpeg" alt="Gatinha Ravena">
         <p>"Ravena com roupinha de algodao docr-super estilosa,quentinha e muito lindaaa"</p>
         <span>— Ravena 🐱</span>
       </div>
 
-      <!-- DEPOIMENTO 2: POODLE (MANTIDO INTACTO) -->
       <div class="card-depoimento">
         <img src="Poodle.jpeg" alt="Poodle de Roupinha">
         <p>"Super felizes com suas roupas novas"</p>
         <span>— Cliente VIP 🐩</span>
       </div>
 
-      <!-- DEPOIMENTO 3: BOLINHA (ATUALIZADO PARA Untitled.jpeg) -->
       <div class="card-depoimento">
         <img src="Untitled.jpeg" alt="Pet Bolinha">
         <p>"Estilo, conforto e quentinho para os passeios de todos os dias!"</p>
@@ -715,7 +730,6 @@
     <p style="opacity:0.8; margin-bottom: 20px;">Dúvidas sobre o tamanho ou estampas? Fale com a gente!</p>
 
     <div class="grid-contatos">
-      <!-- CARD WHATSAPP -->
       <div class="card-contato">
         <span class="icone-contato">💬</span>
         <h4>WhatsApp</h4>
@@ -725,7 +739,6 @@
         </a>
       </div>
 
-      <!-- CARD GMAIL (ADICIONADO AO LADO DO WHATSAPP) -->
       <div class="card-contato">
         <span class="icone-contato">✉️</span>
         <h4>E-mail</h4>
@@ -735,7 +748,6 @@
         </a>
       </div>
 
-      <!-- CARD ENCOMENDAS -->
       <div class="card-contato">
         <span class="icone-contato">🛍️</span>
         <h4>Encomendas</h4>
