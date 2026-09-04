@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head> 
@@ -36,6 +37,10 @@
     /* ==========================================================
        2. ESTILOS GERAIS, TEXTURA DE BOLINHAS & PAINÉIS LATERAIS
        ========================================================== */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
       background-color: var(--bg-color);
@@ -113,11 +118,11 @@
       background-color: var(--dark-pink);
       color: #ffffff;
       border: none;
-      padding: 10px 16px;
+      padding: 8px 14px;
       border-radius: 20px;
       cursor: pointer;
       font-weight: bold;
-      font-size: 0.85em;
+      font-size: 0.8em;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       transition: transform 0.2s ease;
     }
@@ -136,22 +141,22 @@
       background-position: center;
       color: #ffffff;
       text-align: center;
-      padding: 60px 20px;
+      padding: 50px 15px;
     }
 
     header h1 {
-      font-size: 2.5em;
+      font-size: 2em;
       margin: 0;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
     }
 
     header p {
-      font-size: 1.1em;
+      font-size: 1em;
       margin-top: 8px;
       font-weight: 300;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
     }
 
     .alerta-preco {
@@ -159,7 +164,7 @@
       color: #ffffff;
       text-align: center;
       padding: 12px 15px;
-      font-size: 0.95em;
+      font-size: 0.9em;
       font-weight: 600;
       letter-spacing: 0.5px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -167,7 +172,7 @@
 
     .area-chamada-contato {
       text-align: center;
-      margin: 30px 20px 10px 20px;
+      margin: 25px 15px 10px 15px;
     }
 
     .btn-contato-redirecionar {
@@ -175,10 +180,10 @@
       background-color: var(--dark-pink);
       color: #ffffff;
       text-decoration: none;
-      padding: 14px 28px;
+      padding: 12px 24px;
       border-radius: 30px;
       font-weight: bold;
-      font-size: 1em;
+      font-size: 0.95em;
       letter-spacing: 0.5px;
       box-shadow: 0 4px 12px rgba(158, 59, 97, 0.25);
       transition: all 0.3s ease;
@@ -195,14 +200,14 @@
     .painel-moderno {
       background-color: var(--card-bg);
       max-width: 850px;
-      margin: 35px auto;
-      padding: 35px 25px;
-      border-radius: 18px;
-      border-left: 6px solid var(--primary-pink);
-      border-right: 6px solid var(--primary-pink);
+      margin: 25px auto;
+      padding: 25px 18px;
+      border-radius: 16px;
+      border-left: 5px solid var(--primary-pink);
+      border-right: 5px solid var(--primary-pink);
       border-top: 1px solid var(--border-color);
       border-bottom: 1px solid var(--border-color);
-      box-shadow: 0 10px 25px var(--shadow-color);
+      box-shadow: 0 8px 20px var(--shadow-color);
       text-align: center;
       position: relative;
     }
@@ -210,29 +215,29 @@
     .titulo-patinhas {
       color: var(--dark-pink);
       margin-top: 0;
-      margin-bottom: 20px;
-      font-size: 1.5em;
+      margin-bottom: 18px;
+      font-size: 1.3em;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 1px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 15px;
+      gap: 10px;
     }
 
     .icone-patinha {
-      font-size: 1.4em;
+      font-size: 1.2em;
     }
 
     /* ==========================================================
-       5. BOTÕES DE CATEGORIAS (CORREÇÃO DE TEXTO DUPLICADO / BUG)
+       5. BOTÕES DE CATEGORIAS
        ========================================================== */
     .botoes-categorias {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     .btn-aba {
@@ -241,8 +246,8 @@
       color: var(--text-color);
       font-family: inherit;
       font-weight: 600;
-      font-size: 0.95em;
-      padding: 8px 18px;
+      font-size: 0.9em;
+      padding: 8px 14px;
       border-radius: 25px;
       cursor: pointer;
       display: inline-flex;
@@ -254,10 +259,9 @@
       text-shadow: none;
     }
 
-    /* Evita que o texto alt de imagens quebradas apareça e duplique */
     .btn-aba img {
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
       object-fit: cover;
       flex-shrink: 0;
@@ -275,20 +279,19 @@
       background-color: var(--primary-pink);
       color: #ffffff;
       border-color: var(--primary-pink);
-      transform: translateY(-2px);
     }
 
     .conteudo-categoria {
       display: none;
-      margin-top: 25px;
-      padding-top: 25px;
+      margin-top: 20px;
+      padding-top: 20px;
       border-top: 1px solid var(--border-color);
       text-align: center;
     }
 
     .conteudo-categoria h3 {
       color: var(--dark-pink);
-      font-size: 1.25em;
+      font-size: 1.15em;
       margin-top: 0;
       margin-bottom: 15px;
     }
@@ -306,6 +309,8 @@
     .grid-produtos {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
     .card-produto {
@@ -313,14 +318,10 @@
       border: 1px solid var(--border-color);
       border-radius: 12px;
       padding: 12px;
-      width: 260px;
+      width: 100%;
+      max-width: 260px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-      transition: transform 0.3s ease;
       text-align: center;
-    }
-
-    .card-produto:hover {
-      transform: translateY(-5px);
     }
 
     .card-produto img {
@@ -331,9 +332,9 @@
     }
 
     .card-produto h4 {
-      margin: 12px 0 0 0;
+      margin: 10px 0 0 0;
       color: var(--dark-pink);
-      font-size: 1em;
+      font-size: 0.95em;
       font-weight: 600;
     }
 
@@ -344,22 +345,23 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 15px;
     }
 
     .card-passo {
       background-color: var(--card-sub-bg);
       border: 1px dashed var(--border-color);
       border-radius: 12px;
-      padding: 20px;
-      width: 230px;
+      padding: 16px;
+      width: 100%;
+      max-width: 230px;
     }
 
     .card-passo .numero-passo {
       background-color: var(--primary-pink);
       color: white;
-      width: 35px;
-      height: 35px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -372,7 +374,7 @@
       background-color: var(--card-sub-bg);
       border: 1px solid var(--border-color);
       border-radius: 12px;
-      padding: 25px;
+      padding: 18px;
       max-width: 650px;
       margin: 0 auto;
       text-align: left;
@@ -381,8 +383,8 @@
     .item-tutorial {
       display: flex;
       align-items: flex-start;
-      gap: 15px;
-      margin-bottom: 18px;
+      gap: 12px;
+      margin-bottom: 15px;
     }
 
     .item-tutorial:last-child {
@@ -390,7 +392,7 @@
     }
 
     .icone-passo-medida {
-      font-size: 1.5em;
+      font-size: 1.3em;
     }
 
     /* ==========================================================
@@ -400,59 +402,60 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 15px;
     }
 
     .card-depoimento {
       background: var(--card-bg);
       border: 1px solid var(--border-color);
       border-radius: 12px;
-      padding: 15px;
-      width: 230px;
+      padding: 12px;
+      width: 100%;
+      max-width: 230px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.03);
     }
 
     .card-depoimento img, .card-depoimento video {
       width: 100%;
-      height: 230px;
+      height: 200px;
       object-fit: cover;
       border-radius: 8px;
     }
 
     .card-depoimento p {
-      margin: 10px 0 0 0;
-      font-size: 0.88em;
+      margin: 8px 0 0 0;
+      font-size: 0.85em;
       font-style: italic;
     }
 
     .card-depoimento span {
       display: block;
-      margin-top: 5px;
+      margin-top: 4px;
       font-weight: bold;
       color: var(--dark-pink);
-      font-size: 0.85em;
-      font-style: normal;
+      font-size: 0.8em;
     }
 
     .grid-contatos {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 15px;
     }
 
     .card-contato {
       background-color: var(--card-sub-bg);
       border: 1px solid var(--border-color);
       border-radius: 12px;
-      padding: 20px;
-      width: 230px;
+      padding: 16px;
+      width: 100%;
+      max-width: 230px;
       text-align: center;
     }
 
     .icone-contato {
-      font-size: 2em;
-      margin-bottom: 10px;
+      font-size: 1.8em;
+      margin-bottom: 8px;
       display: block;
     }
 
@@ -461,15 +464,10 @@
       background-color: #25d366;
       color: white;
       text-decoration: none;
-      padding: 10px 18px;
+      padding: 10px 16px;
       border-radius: 20px;
       font-weight: bold;
-      font-size: 0.88em;
-      transition: background 0.3s;
-    }
-
-    .btn-whatsapp:hover {
-      background-color: #1eb956;
+      font-size: 0.85em;
     }
 
     .btn-gmail {
@@ -477,53 +475,86 @@
       background-color: #ea4335;
       color: white;
       text-decoration: none;
-      padding: 10px 18px;
+      padding: 10px 16px;
       border-radius: 20px;
       font-weight: bold;
-      font-size: 0.85em;
-      transition: background 0.3s;
+      font-size: 0.8em;
       word-break: break-all;
-    }
-
-    .btn-gmail:hover {
-      background-color: #d33828;
     }
 
     .whatsapp-flutuante {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 15px;
+      right: 15px;
       background-color: #25d366;
       color: white;
       border-radius: 50px;
-      padding: 12px 20px;
+      padding: 10px 16px;
       font-weight: bold;
+      font-size: 0.85em;
       text-decoration: none;
       box-shadow: 0 4px 12px rgba(0,0,0,0.25);
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       z-index: 1000;
-      transition: transform 0.3s;
-    }
-
-    .whatsapp-flutuante:hover {
-      transform: scale(1.05);
     }
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 20px 15px;
       color: #888;
-      font-size: 0.85em;
+      font-size: 0.8em;
       border-top: 1px solid var(--border-color);
       background-color: var(--card-bg);
-      margin-top: 40px;
+      margin-top: 30px;
     }
 
-    @media (max-width: 1280px) {
-      .painel-dicas-lateral { display: none; }
-      .decoracao-rosa-lateral { display: none; }
+    /* ==========================================================
+       8. ADAPTAÇÃO COMPLETA PARA DISPOSITIVOS MÓVEIS (RESPONSIVO)
+       ========================================================== */
+    @media (max-width: 768px) {
+      .painel-dicas-lateral, 
+      .decoracao-rosa-lateral {
+        display: none !important;
+      }
+
+      body {
+        padding: 0 10px;
+      }
+
+      header h1 {
+        font-size: 1.6em;
+      }
+
+      header p {
+        font-size: 0.9em;
+      }
+
+      .painel-moderno {
+        margin: 18px auto;
+        padding: 20px 12px;
+        border-left: 4px solid var(--primary-pink);
+        border-right: 4px solid var(--primary-pink);
+      }
+
+      .botoes-categorias {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        width: 100%;
+      }
+
+      .btn-aba {
+        width: 100%;
+        padding: 8px 10px;
+        font-size: 0.82em;
+        justify-content: flex-start;
+      }
+
+      .card-produto, .card-passo, .card-depoimento, .card-contato {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -585,7 +616,7 @@
       <span class="icone-patinha">🐾</span> Tecidos <span class="icone-patinha">🐾</span>
     </h3>
 
-    <!-- BOTÕES SEM ALT TEXT DUPLICADO -->
+    <!-- BOTÕES EM GRID DE 2 COLUNAS NO MOBILE -->
     <div class="botoes-categorias">
       <button class="btn-aba" onclick="mostrarCategoria('soft', this)">
         <img src="soft-1.jpeg" alt="">
@@ -609,7 +640,7 @@
     <div id="soft" class="conteudo-categoria">
       <h3>Coleção Soft</h3>
       <div class="grid-produtos">
-        <div class="card-produto"><img src="soft-1.jpeg" alt="Roupa Soft"><h4 style="margin-top:10px;">Roupa Soft Pet</h4></div>
+        <div class="card-produto"><img src="soft-1.jpeg" alt="Roupa Soft"><h4>Roupa Soft Pet</h4></div>
       </div>
     </div>
 
@@ -617,7 +648,7 @@
     <div id="fleece" class="conteudo-categoria">
       <h3>Coleção Fleece</h3>
       <div class="grid-produtos">
-        <div class="card-produto"><img src="fleece-1.jpeg" alt="Roupa Fleece"><h4 style="margin-top:10px;">Roupa Fleece Pet</h4></div>
+        <div class="card-produto"><img src="fleece-1.jpeg" alt="Roupa Fleece"><h4>Roupa Fleece Pet</h4></div>
       </div>
     </div>
 
@@ -625,7 +656,7 @@
     <div id="moletom" class="conteudo-categoria">
       <h3>Coleção Moletom</h3>
       <div class="grid-produtos">
-        <div class="card-produto"><img src="moletom-1.jpeg" alt="Roupa Moletom"><h4 style="margin-top:10px;">Roupa Moletom Pet</h4></div>
+        <div class="card-produto"><img src="moletom-1.jpeg" alt="Roupa Moletom"><h4>Roupa Moletom Pet</h4></div>
       </div>
     </div>
 
@@ -633,7 +664,7 @@
     <div id="suede" class="conteudo-categoria">
       <h3>Coleção Malha Suede</h3>
       <div class="grid-produtos">
-        <div class="card-produto"><img src="suede-1.jpeg" alt="Roupa Suede"><h4 style="margin-top:10px;">Roupa Malha Suede Pet</h4></div>
+        <div class="card-produto"><img src="suede-1.jpeg" alt="Roupa Suede"><h4>Roupa Malha Suede Pet</h4></div>
       </div>
     </div>
   </div>
@@ -646,18 +677,18 @@
     <div class="grid-passos">
       <div class="card-passo">
         <div class="numero-passo">1</div>
-        <h4>Escolha o Modelo</h4>
-        <p style="font-size:0.88em; opacity:0.8;">Clique nos tecidos acima e escolha a roupinha perfeita.</p>
+        <h4 style="margin:5px 0;">Escolha o Modelo</h4>
+        <p style="font-size:0.85em; opacity:0.8; margin:0;">Clique nos tecidos acima e escolha a roupinha perfeita.</p>
       </div>
       <div class="card-passo">
         <div class="numero-passo">2</div>
-        <h4>Meça o seu Pet</h4>
-        <p style="font-size:0.88em; opacity:0.8;">Siga nosso tutorial abaixo usando uma fita métrica.</p>
+        <h4 style="margin:5px 0;">Meça o seu Pet</h4>
+        <p style="font-size:0.85em; opacity:0.8; margin:0;">Siga nosso tutorial abaixo usando uma fita métrica.</p>
       </div>
       <div class="card-passo">
         <div class="numero-passo">3</div>
-        <h4>Peça no Whats</h4>
-        <p style="font-size:0.88em; opacity:0.8;">Envie as medidas do seu pet pra gente no WhatsApp!</p>
+        <h4 style="margin:5px 0;">Peça no Whats</h4>
+        <p style="font-size:0.85em; opacity:0.8; margin:0;">Envie as medidas do seu pet pra gente no WhatsApp!</p>
       </div>
     </div>
   </div>
@@ -667,30 +698,30 @@
     <h3 class="titulo-patinhas">
       <span class="icone-patinha">🐾</span> Como Medir o seu Pet <span class="icone-patinha">🐾</span>
     </h3>
-    <p style="opacity:0.8; font-size:0.95em; margin-bottom: 20px;">Utilize uma fita métrica para tirar as medidas do seu amigo antes de fazer o pedido:</p>
+    <p style="opacity:0.8; font-size:0.9em; margin-bottom: 15px;">Utilize uma fita métrica para tirar as medidas do seu amigo antes de fazer o pedido:</p>
 
     <div class="box-tutorial-medidas">
       <div class="item-tutorial">
         <span class="icone-passo-medida">📏</span>
         <div>
-          <strong style="color:var(--dark-pink);">1. Pescoço:</strong>
-          <p style="margin:3px 0 0 0; opacity:0.8; font-size:0.9em;">Passe a fita métrica ao redor do pescoço, na altura onde fica a coleira.</p>
+          <strong style="color:var(--dark-pink); font-size:0.9em;">1. Pescoço:</strong>
+          <p style="margin:2px 0 0 0; opacity:0.8; font-size:0.85em;">Passe a fita métrica ao redor do pescoço, na altura onde fica a coleira.</p>
         </div>
       </div>
 
       <div class="item-tutorial">
         <span class="icone-passo-medida">🐕</span>
         <div>
-          <strong style="color:var(--dark-pink);">2. Tórax (Peitoral):</strong>
-          <p style="margin:3px 0 0 0; opacity:0.8; font-size:0.9em;">Meça a parte mais larga do peito do seu pet, bem atrás das patas dianteiras.</p>
+          <strong style="color:var(--dark-pink); font-size:0.9em;">2. Tórax (Peitoral):</strong>
+          <p style="margin:2px 0 0 0; opacity:0.8; font-size:0.85em;">Meça a parte mais larga do peito do seu pet, bem atrás das patas dianteiras.</p>
         </div>
       </div>
 
       <div class="item-tutorial">
         <span class="icone-passo-medida">✨</span>
         <div>
-          <strong style="color:var(--dark-pink);">3. Comprimento:</strong>
-          <p style="margin:3px 0 0 0; opacity:0.8; font-size:0.9em;">Meça do início do pescoço (onde começa a coleira) até o início do rabo.</p>
+          <strong style="color:var(--dark-pink); font-size:0.9em;">3. Comprimento:</strong>
+          <p style="margin:2px 0 0 0; opacity:0.8; font-size:0.85em;">Meça do início do pescoço (onde começa a coleira) até o início do rabo.</p>
         </div>
       </div>
     </div>
@@ -701,7 +732,7 @@
     <h3 class="titulo-patinhas">
       <span class="icone-patinha">🐾</span> Clientes Satisfeitos <span class="icone-patinha">🐾</span>
     </h3>
-    <p style="opacity:0.8; font-size:0.95em; margin-bottom:20px;">Veja a fofura dos nossos clientes vestindo Bolinha Moda Pet!</p>
+    <p style="opacity:0.8; font-size:0.9em; margin-bottom:15px;">Veja a fofura dos nossos clientes vestindo Bolinha Moda Pet!</p>
 
     <div class="grid-depoimentos">
       <div class="card-depoimento">
@@ -729,13 +760,13 @@
     <h3 class="titulo-patinhas">
       <span class="icone-patinha">🐾</span> Atendimento & Encomendas <span class="icone-patinha">🐾</span>
     </h3>
-    <p style="opacity:0.8; margin-bottom: 20px;">Dúvidas sobre o tamanho ou estampas? Fale com a gente!</p>
+    <p style="opacity:0.8; font-size:0.9em; margin-bottom: 15px;">Dúvidas sobre o tamanho ou estampas? Fale com a gente!</p>
 
     <div class="grid-contatos">
       <div class="card-contato">
         <span class="icone-contato">💬</span>
-        <h4>WhatsApp</h4>
-        <p>Atendimento rápido para tirar dúvidas e realizar pedidos.</p>
+        <h4 style="margin:5px 0;">WhatsApp</h4>
+        <p style="font-size:0.85em; opacity:0.8; margin-bottom:12px;">Atendimento rápido para tirar dúvidas e realizar pedidos.</p>
         <a href="https://wa.me/5500999999999?text=Olá,%20gostaria%20de%20fazer%20um%20pedido!" target="_blank" class="btn-whatsapp">
           Chamar no WhatsApp
         </a>
@@ -743,8 +774,8 @@
 
       <div class="card-contato">
         <span class="icone-contato">✉️</span>
-        <h4>E-mail</h4>
-        <p>Envie sua mensagem ou dúvidas diretamente para nosso e-mail.</p>
+        <h4 style="margin:5px 0;">E-mail</h4>
+        <p style="font-size:0.85em; opacity:0.8; margin-bottom:12px;">Envie sua mensagem ou dúvidas diretamente para nosso e-mail.</p>
         <a href="mailto:bolinhamodapet@gmail.com?subject=Dúvida%20ou%20Pedido%20-%20Bolinha%20Moda%20Pet" class="btn-gmail">
           bolinhamodapet@gmail.com
         </a>
@@ -752,8 +783,8 @@
 
       <div class="card-contato">
         <span class="icone-contato">🛍️</span>
-        <h4>Encomendas</h4>
-        <p>Entregamos com carinho para o seu pet em toda a região.</p>
+        <h4 style="margin:5px 0;">Encomendas</h4>
+        <p style="font-size:0.85em; opacity:0.8; margin:0;">Entregamos com carinho para o seu pet em toda a região.</p>
       </div>
     </div>
   </div>
